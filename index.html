@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online Examination System">
+    <title>Online Examination System</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🎓</span>
+            <span>Online Examination</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#" onclick="showPage('home'); return false;">Home</a>
+            <a href="#" onclick="showPage('register'); return false;">Register</a>
+            <a href="#" onclick="showPage('login'); return false;">Login</a>
+        </nav>
+
+        <button class="nav-login-btn" onclick="showPage('login')">
+            Student Login
+        </button>
+    </header>
+
+
+    <!-- ================= HOME PAGE ================= -->
+    <section id="home" class="page active">
+
+        <div class="hero">
+
+            <div class="hero-content">
+                <p class="small-title">WELCOME TO</p>
+
+                <h1>
+                    Online Examination
+                    <span>System</span>
+                </h1>
+
+                <p class="hero-text">
+                    A simple, secure and user-friendly platform for
+                    conducting online examinations and checking results.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="primary-btn" onclick="showPage('register')">
+                        Register Now
+                    </button>
+
+                    <button class="secondary-btn" onclick="showPage('login')">
+                        Student Login
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="exam-icon">📝</div>
+                <h2>Online Exam</h2>
+                <p>Test your knowledge anytime, anywhere.</p>
+
+                <div class="hero-card-info">
+                    <div>
+                        <strong>20</strong>
+                        <span>Questions</span>
+                    </div>
+
+                    <div>
+                        <strong>60</strong>
+                        <span>Minutes</span>
+                    </div>
+
+                    <div>
+                        <strong>100</strong>
+                        <span>Marks</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- FEATURES -->
+        <div class="features-section">
+
+            <div class="section-heading">
+                <p>OUR FEATURES</p>
+                <h2>Why Choose Our Examination System?</h2>
+            </div>
+
+            <div class="features">
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Secure Login</h3>
+                    <p>
+                        Students can securely login using their registered
+                        email and password.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Time Based Exam</h3>
+                    <p>
+                        Complete your examination within the given time limit.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Instant Result</h3>
+                    <p>
+                        Get your examination score immediately after submission.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Easy to Use</h3>
+                    <p>
+                        Simple and responsive interface for students.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= REGISTER PAGE ================= -->
+    <section id="register" class="page">
+
+        <div class="form-container">
+
+            <div class="form-header">
+                <div class="form-icon">👨‍🎓</div>
+                <h1>Student Registration</h1>
+                <p>Create your account to start the examination.</p>
+            </div>
+
+            <form id="registerForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="regName">Full Name</label>
+                        <input
+                            type="text"
+                            id="regName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <input
+                            type="email"
+                            id="regEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="regPhone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="regPhone"
+                            placeholder="Enter phone number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regCourse">Course</label>
+
+                        <select id="regCourse" required>
+                            <option value="">Select Course</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BBA">BBA</option>
+                            <option value="BSc">B.Sc</option>
+                            <option value="BCom">B.Com</option>
+                            <option value="BA">B.A</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input
+                            type="password"
+                            id="regPassword"
+                            placeholder="Create password"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regConfirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="regConfirmPassword"
+                            placeholder="Confirm password"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="primary-btn full-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p class="form-bottom-text">
+                Already have an account?
+                <a href="#" onclick="showPage('login'); return false;">
+                    Login Here
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOGIN PAGE ================= -->
+    <section id="login" class="page">
+
+        <div class="login-container">
+
+            <div class="login-image">
+                <div class="login-image-content">
+                    <div class="big-login-icon">🎓</div>
+
+                    <h2>Online Examination</h2>
+
+                    <p>
+                        Login to your student account and
+                        start your examination.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="login-form">
+
+                <div class="form-header">
+                    <div class="form-icon">🔑</div>
+                    <h1>Student Login</h1>
+                    <p>Enter your account details.</p>
+                </div>
+
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="remember-row">
+                        <label>
+                            <input type="checkbox" id="rememberMe">
+                            Remember me
+                        </label>
+
+                        <a href="#" onclick="forgotPassword(); return false;">
+                            Forgot Password?
+                        </a>
+                    </div>
+
+
+                    <button type="submit" class="primary-btn full-btn">
+                        Login
+                    </button>
+
+                </form>
+
+
+                <p class="form-bottom-text">
+                    Don't have an account?
+                    <a href="#" onclick="showPage('register'); return false;">
+                        Register Now
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DASHBOARD PAGE ================= -->
+    <section id="dashboard" class="page">
+
+        <div class="dashboard">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <div class="student-profile">
+                    <div class="profile-avatar">👤</div>
+
+                    <h3 id="dashboardStudentName">
+                        Student
+                    </h3>
+
+                    <p id="dashboardStudentEmail">
+                        student@email.com
+                    </p>
+                </div>
+
+
+                <div class="sidebar-menu">
+
+                    <button
+                        class="sidebar-item active"
+                        onclick="showDashboardSection('instructions')"
+                    >
+                        📋 Exam Instructions
+                    </button>
+
+                    <button
+                        class="sidebar-item"
+                        onclick="openProfile()"
+                    >
+                        👤 My Profile
+                    </button>
+
+                    <button
+                        class="sidebar-item"
+                        onclick="logout()"
+                    >
+                        🚪 Logout
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+            <!-- DASHBOARD CONTENT -->
+            <main class="dashboard-content">
+
+                <div id="instructions" class="dashboard-section">
+
+                    <div class="dashboard-header">
+                        <div>
+                            <p class="small-title">STUDENT DASHBOARD</p>
+                            <h1>Welcome, <span id="welcomeName">Student</span>!</h1>
+                        </div>
+
+                        <div class="dashboard-status">
+                            <span class="status-dot"></span>
+                            Ready
+                        </div>
+                    </div>
+
+
+                    <div class="exam-info-card">
+
+                        <div class="exam-title-area">
+                            <div class="exam-title-icon">📝</div>
+
+                            <div>
+                                <h2>Online Examination</h2>
+                                <p>General Knowledge & Computer Basics</p>
+                            </div>
+                        </div>
+
+
+                        <div class="exam-details">
+
+                            <div class="detail-box">
+                                <strong>20</strong>
+                                <span>Total Questions</span>
+                            </div>
+
+                            <div class="detail-box">
+                                <strong>60</strong>
+                                <span>Time Limit</span>
+                            </div>
+
+                            <div class="detail-box">
+                                <strong>100</strong>
+                                <span>Total Marks</span>
+                            </div>
+
+                            <div class="detail-box">
+                                <strong>40%</strong>
+                                <span>Passing Marks</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="instructions-card">
+
+                        <h2>📋 Examination Instructions</h2>
+
+                        <ul>
+                            <li>Read every question carefully before answering.</li>
+                            <li>The examination contains 20 multiple-choice questions.</li>
+                            <li>Total examination time is 60 minutes.</li>
+                            <li>Each question carries 5 marks.</li>
+                            <li>There is no negative marking.</li>
+                            <li>You can move between questions using Next and Previous buttons.</li>
+                            <li>Make sure to submit your examination before the timer ends.</li>
+                            <li>After submission, your result will be displayed immediately.</li>
+                        </ul>
+
+                    </div>
+
+
+                <button
+    type="button"
+    id="startExamBtn"
+    class="primary-btn start-exam-btn"
+>
+    Start Examination
+</button>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EXAM PAGE ================= -->
+    <section id="exam" class="page">
+
+        <div class="exam-layout">
+
+            <!-- EXAM SIDEBAR -->
+            <aside class="exam-sidebar">
+
+                <div class="exam-sidebar-header">
+                    <h3>Question Palette</h3>
+                    <p>Select a question</p>
+                </div>
+
+                <div id="questionPalette" class="question-palette">
+                    <!-- Question buttons are generated by JavaScript -->
+                </div>
+
+
+                <div class="palette-info">
+
+                    <div>
+                        <span class="palette-dot current"></span>
+                        Current
+                    </div>
+
+                    <div>
+                        <span class="palette-dot answered"></span>
+                        Answered
+                    </div>
+
+                    <div>
+                        <span class="palette-dot unanswered"></span>
+                        Unanswered
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- EXAM MAIN -->
+            <main class="exam-main">
+
+                <div class="exam-topbar">
+
+                    <div>
+                        <p>ONLINE EXAMINATION</p>
+                        <h2>General Knowledge & Computer Basics</h2>
+                    </div>
+
+                    <div class="timer-box">
+                        <span>⏱️</span>
+                        <div>
+                            <small>Time Remaining</small>
+                            <strong id="timer">60:00</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div class="progress-text">
+                        <span>
+                            Question
+                            <strong id="currentQuestionNumber">1</strong>
+                            of
+                            <strong id="totalQuestions">20</strong>
+                        </span>
+
+                        <span id="progressPercent">0%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="progressBar"
+                            class="progress-fill"
+                            style="width: 0%;"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION CARD -->
+                <div class="question-card">
+
+                    <div class="question-label">
+                        Question
+                        <span id="questionNumber">1</span>
+                    </div>
+
+                    <h2 id="questionText">
+                        Question will appear here.
+                    </h2>
+
+
+                    <div id="optionsContainer" class="options-container">
+                        <!-- Options generated by JavaScript -->
+                    </div>
+
+                </div>
+
+
+                <!-- NAVIGATION -->
+                <div class="exam-navigation">
+
+                    <button
+                        id="previousBtn"
+                        class="secondary-btn"
+                        onclick="previousQuestion()"
+                    >
+                        ← Previous
+                    </button>
+
+
+                    <button
+                        id="nextBtn"
+                        class="primary-btn"
+                        onclick="nextQuestion()"
+                    >
+                        Next →
+                    </button>
+
+                </div>
+
+
+                <div class="submit-area">
+
+                    <button
+                        class="submit-btn"
+                        onclick="submitExam()"
+                    >
+                        ✓ Submit Examination
+                    </button>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESULT PAGE ================= -->
+    <section id="result" class="page">
+
+        <div class="result-container">
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <p class="small-title">EXAMINATION COMPLETED</p>
+
+            <h1>Your Result</h1>
+
+            <p class="result-message" id="resultMessage">
+                Congratulations! Your examination has been completed.
+            </p>
+
+
+            <div class="score-circle">
+
+                <div class="score-content">
+                    <strong id="scorePercentage">0%</strong>
+                    <span>Score</span>
+                </div>
+
+            </div>
+
+
+            <div class="result-details">
+
+                <div class="result-box">
+                    <strong id="correctAnswers">0</strong>
+                    <span>Correct Answers</span>
+                </div>
+
+                <div class="result-box">
+                    <strong id="wrongAnswers">0</strong>
+                    <span>Wrong Answers</span>
+                </div>
+
+                <div class="result-box">
+                    <strong id="totalMarks">0</strong>
+                    <span>Total Marks</span>
+                </div>
+
+                <div class="result-box">
+                    <strong id="resultStatus">-</strong>
+                    <span>Status</span>
+                </div>
+
+            </div>
+
+
+            <div id="answerReview" class="answer-review">
+                <!-- Answer review generated by JavaScript -->
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button
+                    class="primary-btn"
+                    onclick="showPage('home')"
+                >
+                    🏠 Back to Home
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    onclick="showPage('exams')"
+                >
+                    📋 Dashboard
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROFILE MODAL ================= -->
+    <div id="profileModal" class="modal">
+
+        <div class="modal-content">
+
+        <button type="button" class="modal-close" id="closeProfileBtn" onclick="document.getElementById('profileModal').classList.remove('show');">×</button>
+
+            <div class="modal-avatar">👤</div>
+
+            <h2>My Profile</h2>
+
+            <div class="profile-details">
+
+                <div>
+                    <span>Full Name</span>
+                    <strong id="profileName">Student</strong>
+                </div>
+
+                <div>
+                    <span>Email</span>
+                    <strong id="profileEmail">-</strong>
+                </div>
+
+                <div>
+                    <span>Phone</span>
+                    <strong id="profilePhone">-</strong>
+                </div>
+
+                <div>
+                    <span>Course</span>
+                    <strong id="profileCourse">-</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>🎓 Online Examination System</h3>
+                <p>
+                    A simple online examination platform
+                    for educational purposes.
+                </p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+
+                <a href="#" onclick="showPage('home'); return false;">
+                    Home
+                </a>
+
+                <a href="#" onclick="showPage('register'); return false;">
+                    Register
+                </a>
+
+                <a href="#" onclick="showPage('login'); return false;">
+                    Login
+                </a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>📧 support@onlineexam.com</p>
+                <p>📞 +91 98765 43210</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            © 2026 Online Examination System. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
