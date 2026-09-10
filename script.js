@@ -770,8 +770,7 @@ if (profileModal) {
     });
 }
 
-// ---------- Logout ----------
-function logout() {
+window.logout = function () {
 
     loggedIn = false;
     examStarted = false;
@@ -782,7 +781,7 @@ function logout() {
     alert("You have been logged out.");
 
     showPage("home");
-}
+};
 
 // ---------- Register Page Button ----------
 const goRegisterBtn = getElement("goRegisterBtn");
