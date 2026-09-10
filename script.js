@@ -771,20 +771,17 @@ if (profileModal) {
 }
 
 // ---------- Logout ----------
-const logoutBtn = getElement("logoutBtn");
+function logout() {
 
-if (logoutBtn) {
+    loggedIn = false;
+    examStarted = false;
 
-    logoutBtn.addEventListener("click", function () {
+    clearInterval(timerInterval);
+    timerInterval = null;
 
-        loggedIn = false;
+    alert("You have been logged out.");
 
-        clearInterval(timerInterval);
-
-        alert("You have been logged out.");
-
-        showPage("home");
-    });
+    showPage("home");
 }
 
 // ---------- Register Page Button ----------
