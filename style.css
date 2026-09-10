@@ -726,7 +726,7 @@ body {
     border-color: #1769aa;
 }
 
-.question-number-btn.current {
+.question-number-btn.active {
     background: #1769aa;
     color: white;
     border-color: #1769aa;
