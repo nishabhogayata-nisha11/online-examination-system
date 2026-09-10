@@ -423,7 +423,7 @@ function renderQuestion() {
                     value="${index}"
                     ${selectedAnswers[currentQuestion] === index ? "checked" : ""}
                 >
-                <span>${option}</span>
+                <span>${option.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</span>
             `;
 
             const radio = optionLabel.querySelector("input");
